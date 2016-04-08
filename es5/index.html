@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Game</title>
+  </head>
+  <body ng-controller="GameController as gamectrl">
+    <h1>Move around in the dungeon and look for loot. Power up to fight the boss.</h1>
+    <p>You move by clicking UP, DOWN, RIGHT, LEFT.</p>
+    <button id="up" ng-click="gamectrl.getPosition(0, 1)">UP</button>
+    <button id="down" ng-click="gamectrl.getPosition(0, -1)">DOWN</button>
+    <button id="right" ng-click="gamectrl.getPosition(1, 0)">RIGHT</button>
+    <button id="left" ng-click="gamectrl.getPosition(-1, 0)">LEFT</button>
+    <div class="position">Your current position in the dungeon is at : {{gamectrl.curPosition}}</div>
+        <div class="position">The boss is at : {{gamectrl.bossPosition}}</div>
+
+    <p>Intructions: You are a robot stuck in a dungeon. You need to pick up random tools in the dungeon and power up, before the boss finds you OR you run out of battery power.</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
