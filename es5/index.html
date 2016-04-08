@@ -11,10 +11,14 @@
     <button id="down" ng-click="gamectrl.getPosition(0, -1)">DOWN</button>
     <button id="right" ng-click="gamectrl.getPosition(1, 0)">RIGHT</button>
     <button id="left" ng-click="gamectrl.getPosition(-1, 0)">LEFT</button>
-    <div class="position">Your current position in the dungeon is at : {{gamectrl.curPosition}}</div>
-        <div class="position">The boss is at : {{gamectrl.bossPosition}}</div>
+    <h3 class="position">Your current position in the dungeon is at : {{gamectrl.curPosition}} and the boss is currently at : {{gamectrl.bossPosition}}</h3>
 
-    <p>Intructions: You are a robot stuck in a dungeon. You need to pick up random tools in the dungeon and power up, before the boss finds you OR you run out of battery power.</p>
+    <h3> Your stats: {{gamectrl.characters}}</h3>
+
+    <h3>Important Message! : "{{gamectrl.message}}"</h3>
+    <h2>{{gamectrl.battleMsg}}</h2>
+
+    <p>Intructions: You are a robot stuck in a dungeon. You need to pick up random tools in the dungeon and power up, before the boss RANDOMLY finds you OR before you run out of battery power.</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="app.js"></script>
